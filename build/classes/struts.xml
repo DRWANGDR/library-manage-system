@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<!DOCTYPE struts PUBLIC    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"   
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="default" extends="struts-default">
+		<!-- 用户登录 -->
+		<action name="login" class="login">
+			<result name="success">welcome.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<action name="register" class="login" method="register">
+			<result name="success">login.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		
+		
+		
+        <action name="studentInfo" class="student">
+			<result name="success">studentInfo.jsp</result>
+		</action>
+		<action name="findStudent" class="student" method="findStudent">
+			<result name="success">moredetail.jsp</result>
+		</action>
+		<action name="getImage" class="student" method="getImage"></action>
+		<action name="deleteStudent" class="student" method="deleteStudent">
+			<result name="success">success.jsp</result>
+		</action>
+		<action name="updateStudentView" class="student" method="updateStudentView">
+			<result name="success">updateStudentView.jsp</result>
+		</action>
+		<action name="updateStudent" class="student" method="updateStudent">
+			<result name="success">success.jsp</result>
+		</action>
+		<action name="addStudentView" class="student" method="addStudentView">
+			<result name="success">addStudentInfo.jsp</result>
+		</action>
+		<action name="addStudent" class="student" method="addStudent">
+			<result name="success">success.jsp</result>
+			<result name="error">existStudent.jsp</result>
+		</action>
+        <action name="addStudentRecordView" class="record">
+			<result name="success">addRecord.jsp</result>
+		</action>
+		<action name="addorupdateStudentRecord" class="record" method="addorupdateStudentRecord">
+			<result name="success">success.jsp</result>
+		</action>
+        <action name="studentInfo1" class="student">
+			<result name="success">studentInfo1.jsp</result>
+		</action>
+		<action name="studentInfo2" class="student">
+			<result name="success">studentInfo2.jsp</result>
+		</action>
+		<action name="studentInfo3" class="student">
+			<result name="success">studentInfo3.jsp</result>
+		</action>
+		<action name="studentInfo4" class="student">
+			<result name="success">studentInfo4.jsp</result>
+		</action>
+		<action name="yanzheng" class="login" method="updateLogin">
+			<result name="success">gaimi.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+        
+	</package>
+</struts>
+
+
+
